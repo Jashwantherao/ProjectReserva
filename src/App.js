@@ -10,6 +10,7 @@ import ReportMissingBag from './pages/ReportMissingBag';
 import DynamicPricing from './pages/DynamicPricing';
 import Login from './components/Login';
 import Register from './components/Register';
+import SearchResults from './components/SearchResults';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/dynamic-pricing" element={<DynamicPricing />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/search-results" element={<SearchResults />} />
       </Routes>
     </Router>
   );

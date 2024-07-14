@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 import { FaSignInAlt, FaUserPlus, FaSearch, FaBus, FaCalendarAlt } from 'react-icons/fa';
 import styles from './Home.module.css';
 
 const Home = () => {
+  const navigate = useNavigate();
   const [searchData, setSearchData] = useState({
     source: '',
     destination: '',
@@ -16,8 +17,7 @@ const Home = () => {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    console.log('Search data:', searchData);
-    // Implement your search logic here
+    navigate('/search-results', { state: searchData });
   };
 
   return (

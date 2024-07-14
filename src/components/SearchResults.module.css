@@ -1,0 +1,184 @@
+/* src/pages/SearchResults.module.css */
+
+.searchResults {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.backLink {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #3498db;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.title {
+  font-size: 2rem;
+  color: #2c3e50;
+}
+
+.searchForm {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.inputWrapper {
+  flex-grow: 1;
+  position: relative;
+}
+
+.inputIcon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #3498db;
+}
+
+.inputWrapper input {
+  width: 100%;
+  padding: 15px 15px 15px 45px;
+  font-size: 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+}
+
+.searchButton {
+  padding: 15px 30px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sortAndFilter {
+  margin-bottom: 20px;
+}
+
+.sortBy {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.sortBy button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #2c3e50;
+}
+
+.sortBy button.active {
+  color: #3498db;
+  font-weight: bold;
+}
+
+.mainContent {
+  display: flex;
+  gap: 20px;
+}
+
+.filtersPane {
+  width: 250px;
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.filterSection {
+  margin-bottom: 20px;
+}
+
+.filterSection h4 {
+  margin-bottom: 10px;
+}
+
+.filterSection label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.busListContainer {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.busCard {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.busCard:hover {
+  transform: translateY(-5px);
+}
+
+.busName {
+  font-size: 1.4rem;
+  color: #3498db;
+  margin-bottom: 15px;
+}
+
+.busDetails {
+  margin-bottom: 15px;
+}
+
+.busDetails p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 5px 0;
+}
+
+.bookButton {
+  width: 100%;
+  padding: 10px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.bookButton:hover {
+  background-color: #2980b9;
+}
+
+@media (max-width: 768px) {
+  .searchForm, .mainContent {
+    flex-direction: column;
+  }
+
+  .filtersPane {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .busListContainer {
+    grid-template-columns: 1fr;
+  }
+}
