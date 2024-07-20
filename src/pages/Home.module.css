@@ -106,6 +106,129 @@
   transform: scale(1.05);
 }
 
+.footer {
+  padding: 20px;
+  background-color: #bfbfbf;
+  color: #000000;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.footerLinks {
+  list-style: none;
+  padding: 0;
+}
+
+.footerLinks li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.footerLinks a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.footerLinks a:hover {
+  text-decoration: underline;
+}
+
+.offersSection {
+  padding: 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+  animation: fadeIn 1s ease-out forwards;
+  margin-top: 50px;
+}
+
+.offersContainer {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column layout for mobile */
+  gap: 20px;
+}
+
+.offerItem {
+  background-color: #ffffff;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.offerItem:hover {
+  transform: scale(1.05); /* Slightly increase size */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+}
+
+.offerItem:nth-child(1) {
+  background-color: #e74c3c; /* Red */
+}
+
+.offerItem:nth-child(2) {
+  background-color: #3498db; /* Blue */
+}
+
+.offerItem:nth-child(3) {
+  background-color: #2ecc71; /* Green */
+}
+
+.offerItem:nth-child(4) {
+  background-color: #f1c40f; /* Yellow */
+}
+
+/* Repeat or create a pattern */
+.offerItem:nth-child(5) {
+  background-color: #9b59b6; /* Purple */
+}
+
+.offerItem:nth-child(6) {
+  background-color: #e67e22; /* Orange */
+}
+
+/* Pattern repeats for every 6 items */
+.offerItem:nth-child(6n+1) {
+  background-color: #e74c3c; /* Red */
+}
+.offerItem:nth-child(6n+2) {
+  background-color: #3498db; /* Blue */
+}
+.offerItem:nth-child(6n+3) {
+  background-color: #2ecc71; /* Green */
+}
+.offerItem:nth-child(6n+4) {
+  background-color: #f1c40f; /* Yellow */
+}
+.offerItem:nth-child(6n+5) {
+  background-color: #9b59b6; /* Purple */
+}
+.offerItem:nth-child(6n+6) {
+  background-color: #e67e22; /* Orange */
+}
+
+/* Tablet devices (width >= 768px) */
+@media (min-width: 768px) {
+  .offersContainer {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
+    gap: 20px;
+  }
+}
+
+/* Desktop devices (width >= 1024px) */
+@media (min-width: 1024px) {
+  .offersSection {
+    padding: 40px 50px;
+  }
+
+  .offersContainer {
+    grid-template-columns: repeat(3, 1fr); /* Three columns for desktops */
+    gap: 30px;
+  }
+
+  .offerItem {
+    padding: 20px;
+  }
+}
+
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
@@ -125,7 +248,6 @@
     padding-top: 50px; /* Adjusted for mobile */
   }
 }
-/* ... (previous styles remain the same) */
 
 .searchSection {
   display: flex;
